@@ -1,0 +1,300 @@
+@yse-btn:#f8c500;
+@yse-btn-h:#eaba00;
+@no-btn:rgba(250,250,250,1);
+@no-btn-h:rgba(215,215,215,1);
+
+
+.btnYes{
+	background:@yse-btn;
+	&:hover { background:@yse-btn-h; }
+}
+.btnNo{
+	background:@no-btn;
+	&:hover { background:@no-btn-h; }
+}
+
+.addStore{
+	height:40px;
+	.fromModel{
+		line-height: 40px;
+		padding-left: 0;
+		a{
+		color:#0099ff;
+		text-decoration: underline;
+		}
+	}
+}
+
+	
+	#storeTab{
+		font-size: 13px;
+		color:#6b6b6b;
+		padding:0;
+	    border-collapse: separate;
+		table{
+			border:1px solid #c9c9c9;
+
+			th{
+				height:50px;
+				border:1px solid #c9c9c9;
+				z-index: 10;
+				font-weight: 800;
+			}
+			tr{
+				border:1px solid #c9c9c9;
+				td{
+					border:1px solid #c9c9c9;
+				}
+			}
+		}
+	}
+	.storeId{
+	line-height: 40px;
+	}
+	.storeTo{
+		float:left;
+		line-height: 30px;
+	}
+	.storeInputCheck{
+		line-height: 40px;
+		padding-left: 30px;
+		label{
+			margin-right: 20px;
+			input{
+				margin-right: 5px;
+			}
+		}
+	}
+.storeCardTit{
+	font-size: 15px;
+	padding-left: 25px;
+}
+#myModaStoteCord{
+	margin-top: 200px;
+	
+	.storeCardMod{
+		height:50px;
+		line-height: 50px;
+		padding-left: 100px;
+		.storeInt{
+			height:30px;
+			width:100px;
+
+		}
+	}
+}
+
+.modal{
+	font-size: 16px;
+	.modal-header{
+		background:#f4f5f9;
+	}
+	.storeCardMod{
+		height:50px;
+		line-height: 50px;
+		padding-left: 100px;
+		.storeInt{
+			height:30px;
+			width:100px;
+			text-indent: 10px;
+		}
+	}
+}
+.modalDel{
+	margin-top: 200px;
+	.modal-header{
+	height:50px;
+	}
+}
+
+
+
+
+// 点击删除
+#storeManageModeDe{
+	margin-top: 150px;
+	.modal-header{
+		background:#fff;
+		border:none;
+	}
+	.modal-body{
+		span{
+			margin-right: 10px;
+		}
+	}
+}
+// 核销管理
+#storeManageModeCode{
+	margin-top: 150px;
+}
+
+.card_manage_span_yse{
+	color:#339900;
+}
+.card_manage_span_no{
+	color:#ff6600;
+}
+.fa_pencil_yellow{
+	color:#f8c500;
+}
+.card_manage_w90{
+	width:90px;
+}
+// 同步卡券   单独样式
+.min_w{
+	width:150px;
+	padding-left: 5px;
+}
+
+//  card_manage  页面样式
+.modal{
+	background:none;
+}
+#card_manage{
+	.content{
+		padding-top: 0px;
+	}
+	.with-border{
+		.check{
+			width:80px;
+			height:30px;
+			padding-right: 0;
+			line-height: 35px;
+			input{
+				width:15px;
+				height:15px;
+			}
+			label{
+				font-size: 15px;
+			}
+		}
+		.storeSearch{
+			float:left;
+		}
+	}
+
+	#card_manage_footer{
+		.row{
+			.col-xs-3{
+				padding-left: 5px;
+				width:180px;
+			}
+		}
+	}
+
+// 模态框（Modal）批量修改发放数量
+	.storeManageModel{
+		padding-top: 200px;
+		.modal-content{
+			border-radius: 5px;
+		}
+		.in_wrap{
+			width: 60%;
+			margin: 0 auto;
+		}
+		.modal-header{
+			padding:0;
+			padding-top: 23px;
+			background:#fff;
+			height:50px;
+			font-size: 14px;
+			color:#999;
+		}
+		.modal-body{
+			padding-left: 0;
+			padding-right: 0;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border-top: 1px dashed #ccc;
+			border-bottom: 1px dashed #ccc;
+			input{
+				width:100%;
+			}
+		}
+		.modal-footer{
+			padding:0;
+			background:#fff;
+			text-align: left;
+			.btn{
+				width: 50px;
+				height: 30px;
+				width: 50px;
+				height: 24px;
+				padding: 0;
+				margin-top: 10px;
+			}
+		}
+		.modal-bott{
+			padding-top: 10px;
+			padding-bottom: 20px;
+			font-size: 13px;
+			color:#999;
+			
+		}
+
+	}
+
+}
+
+//卡券详情
+.card_manage_content{
+	padding-top: 0;
+	.card_manage_row1{
+		margin:0;
+		.tit_back{
+			background:#f2f2f2;
+			}
+		.title1{
+			height:50px;
+			line-height: 50px;
+			label{
+				width:100px;
+				margin-left: 40px;
+			}
+			input{
+				margin-right: 5px;
+			}
+			.data_input{
+				margin-top: 10px;
+			}
+			
+			
+		}
+		.bar{
+			height:0;
+			border-top: 1px dashed #d7d7d7;
+			margin-left: 70px;
+		}
+	}
+	.card_manage_row2{
+		border-bottom: 1px solid #d7d7d7;
+		.title2{
+			width:400px;
+			margin-left: 200px;
+			.title2_list{
+				width:100%;
+					label{
+					min-width: 100px;
+					text-align: right;
+					margin-right: 20px;
+					font-size: 13px;
+				}
+			}
+			
+		}
+	}
+	.card_manage_row3{
+		.view_date{
+			.view_date_lab{
+				float:left;
+				margin-left: 50px;
+			}
+			.view_date_inp{
+				float: left;
+				width:300px;
+				margin-top: 10px;
+			}
+		}
+	}
+	
+}

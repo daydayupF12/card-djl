@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>大家乐在线点餐系统</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="../../dist/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../dist/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../../plugins/datatables/dataTables.bootstrap.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="../../css/admin.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.åjs"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+  <!-- 头部信息 -->
+  <header class="main-header"></header>
+  <!--  左侧导航 -->
+  <aside class="main-sidebar"></aside>
+
+  <!-- 内容区域 -->
+  <div class="content-wrapper">
+    <!-- 内容标题 -->
+    <section class="content-header">
+        <h1>
+            会员信息管理
+        </h1>
+        <!-- <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+            <li><a href="#">门店管理</a></li>
+            <li class="active">门店列表</li>
+        </ol> -->
+    </section>
+
+    <!-- 内容区 -->
+    <section class="content pd-top0">
+        <div class="row">
+            <div class="col-xs-12">
+            <!-- /.box -->
+            <div class="box">
+            <div class="box-header solist">
+              <!-- <h3 class="box-title">Bordered Table</h3> -->
+                <div class="row">
+                    <div class="col-xs-3">
+                        <input type="text" class="form-control" placeholder="输入会员手机号或姓名进行快速查询">
+                    </div>
+                    <div class="col-xs-1">
+                        <button type="button" class="btn btn-block btn-default btn-flat">搜索</button>
+                    </div>
+                </div>
+              
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body solist">
+                <table class="table table-bordered text-center">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>openID</th>
+                            <th>姓名</th>
+                            <th>手机号</th>
+                            <th>生日</th>
+                            <th>邮箱</th>
+                            <th>来源</th>
+                            <th>入会门店</th>
+                            <th>入会时间</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>o2QgZt9DyWiFGnMDMHbotvxnSmOc</td>
+                            <td>王萌萌</td>
+                            <td>13333336666</td>
+                            <td>1991-02-23</td>
+                            <td>abc1122@163.com</td>
+                            <td>线上</td>
+                            <td></td>
+                            <td>2016-12-06 19:57:26</td>
+                            <td>
+                                <a href="member_detail.html" class="btn btn-default btn-xs btn-flat margin">查看详情</a>
+                                <button type="button" class="btn btn-default btn-xs btn-flat margin" data-toggle="modal" data-target="#memberManageModel">删除</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer clearfix">
+              <ul class="pagination pagination-sm no-margin pull-right">
+                <li><a href="#">«</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">»</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+<!-- 模态框（Modal） -->
+<!-- 模态框（Modal）删除 -->
+<div class="modal modalDel" id="memberManageModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close hidden" data-dismiss="modal" aria-hidden="true">
+          &times;
+        </button>
+        <h4 class="modal-title hidden" id="myModalLabel">
+          删除
+        </h4>
+      </div>
+      <div class="modal-body">
+          <div class="box-body">
+            <div class="row ">      
+                <div class="col-xs-12 text-center ">
+                   <span><img src="../img/u69.png" alt=""></span> <span>确定要删除该记录吗？</span>
+                </div>
+                
+            </div> 
+          </div>
+      </div>
+      <div class="modal-footer" style="text-align:center !important">
+        <button type="button" class="btn bg-pink btn-flat btnYes">确认</button>
+        <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">取消</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
+</div>
+
+
+
+
+
+<!-- 添加 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          &times;
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+          添加餐品分类
+        </h4>
+      </div>
+      <div class="modal-body">
+          <div class="box-body">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-3 control-label"><i class="red import">*</i>分类名称</label>
+              <div class="col-sm-9">
+                <input type="" class="form-control" id="" placeholder="">
+              </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label"><i class="red import">*</i>所属时段</label>
+                <div class="col-sm-9">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="option1">全部时段
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="option1">早茶市
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="option1">午夜市
+                    </label>
+                </div>
+            </div>
+            <div class="form-group col-xs-12">
+              <label for="inputPassword3" class="col-sm-3 control-label text-right"><i class="red import">*</i>分类排序</label>
+
+              <div class="col-sm-9">
+                <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                 <p class="help-center text-gray">该分类在页面中的排列顺序</p>
+              </div>
+
+            </div>
+             <div class="form-group">
+                <label class="col-sm-3 control-label"><i class="red import">*</i>封面图片</label>
+                <div class="col-sm-3" id="preview">
+                    <img id="imghead" src="../img/pct.jpg" alt="" width="150" height="100">
+                </div>
+                <input type="file" id="pto" onchange="previewImage(this)" style="display:none;">
+                <!-- <div class="col-sm-2" >
+                    <a href="javascript:;" class="delImg" >删除</a>
+                </div> -->
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label"></label>
+                <div class="col-sm-7">
+                    <p class="text-gray">尺寸150*100像素，PNG图片</p>
+                </div>
+            </div>
+           </form>
+          </div>
+      </div>
+      <div class="modal-footer" style="text-align:center !important">
+        <button type="button" class="btn btn-yellow btn-flat">确认</button>
+        <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">取消</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
+</div>
+
+
+<!-- 编辑 -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          &times;
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+          添加餐品分类
+        </h4>
+      </div>
+      <div class="modal-body">
+          <div class="box-body">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-3 control-label"><i class="red import">*</i>分类名称</label>
+              <div class="col-sm-9">
+                <input type="" class="form-control" id="" placeholder="">
+              </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label"><i class="red import">*</i>所属时段</label>
+                <div class="col-sm-9">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="option1">全部时段
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="option1">早茶市
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="option1">午夜市
+                    </label>
+                </div>
+            </div>
+            <div class="form-group col-xs-12">
+              <label for="inputPassword3" class="col-sm-3 control-label text-right"><i class="red import">*</i>分类排序</label>
+
+              <div class="col-sm-9">
+                <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                 <p class="help-center text-gray">该分类在页面中的排列顺序</p>
+              </div>
+
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label"><i class="red import">*</i>封面图片</label>
+                <div class="col-sm-3" id="preview2">
+                    <img id="imghead2" src="../img/pct.jpg" alt="" width="150" height="100">
+                </div>
+                <input type="file" id="pto2" onchange="previewImage2(this)" style="display:none;">
+                <!-- <div class="col-sm-2" >
+                    <a href="javascript:;" class="delImg" >删除</a>
+                </div> -->
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label"></label>
+                <div class="col-sm-7">
+                    <p class="text-gray">尺寸150*100像素，PNG图片</p>
+                </div>
+            </div>
+           </form>
+          </div>
+      </div>
+      <div class="modal-footer" style="text-align:center !important">
+        <button type="button" class="btn btn-yellow btn-flat">确认</button>
+        <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">取消</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
+</div>
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../plugins/datatables/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>
+<script src="../../dist/js/demo.js"></script>
+
+<script type="text/javascript">
+  var pageMenu = {"active": [3]};
+</script>
+<script src="../../js/vendors.js" type="text/javascript"></script>
+<script src="../../js/index.js" type="text/javascript"></script>
+<!-- page script -->
+
+</body>
+</html>
